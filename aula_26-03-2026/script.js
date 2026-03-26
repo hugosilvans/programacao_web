@@ -9,7 +9,7 @@ function atualizarValor(){
     let tipo = document.getElementById("combustivel").value;
     console.log(tipo);
 
-    let = litros = parseFloat(document.getElementById("litros").value);
+    let litros = parseFloat(document.getElementById("litros").value);
     let precoPorLitro;
     switch (tipo){
         case "gasolina":
@@ -17,6 +17,7 @@ function atualizarValor(){
             break;
         case "etanol":
             precoPorLitro = precoEtanol;
+            break;
         default:
             console.log("Escolha Uma opção");
             return;
@@ -30,12 +31,12 @@ function calcularValorAbastecimento(precoCombustivel, litros){
     //document.getElementById("resultado").textContent = valorTotal;
     
     if(litros<=0 || isNaN(litros)){
-        document.getElementById("resultado").textContent.content = "Insira valor válido";
+        document.getElementById("resultado").textContent = "Insira valor válido";
         return;
 
     } else{
         let valorTotal = precoCombustivel * litros;
-        document.getElementById("resultado").textContent = `Valor R$ ${valorTotal}`;
+        document.getElementById("resultado").textContent = `Valor R$ ${valorTotal.toFixed(2)}`;
     }
 
 
@@ -44,5 +45,7 @@ function calcularValorAbastecimento(precoCombustivel, litros){
 let tipoCombustivel = document.getElementById("combustivel");
 tipoCombustivel.addEventListener("change", atualizarValor);
 
-let litros = document.getElementById("litros");
-litros.addEventListener("input", atualizarValor);
+let litrosInput = document.getElementById("litros");
+litrosInput.addEventListener("input", atualizarValor);
+
+function formatarMoeda
