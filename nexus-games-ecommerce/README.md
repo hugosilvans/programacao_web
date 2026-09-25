@@ -29,10 +29,10 @@ Projeto acadêmico de Front-End para um e-commerce de eletrônicos voltado ao un
 
 ## Executar o projeto
 
-Abra `dist/index.html` no navegador ou inicie um servidor local na pasta `dist`:
+Depois de baixar ou clonar a pasta publicada no GitHub, abra `index.html` no navegador ou inicie um servidor local dentro da pasta do projeto:
 
 ```bash
-python -m http.server 8000 -d dist
+python -m http.server 8000
 ```
 
 Depois acesse `http://localhost:8000`.
